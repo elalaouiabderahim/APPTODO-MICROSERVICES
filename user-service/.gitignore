@@ -1,0 +1,27 @@
+# Node
+node_modules/
+
+# NestJS
+dist/
+
+# Logs
+*.log
+
+# Variables d'environnement
+.env
+
+# Prisma
+generated/
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-data/
+
+# npm
+package-lock.json
