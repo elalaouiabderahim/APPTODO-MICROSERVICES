@@ -271,9 +271,9 @@ docker compose up --build
 
 ✅ Auth-Service en cours
 
-🟡 User-Service en cours
+✅ User-Service en cours
 
-⚪ TODO-Service
+✅ TODO-Service
 
 ⚪ Category-Service
 
@@ -283,10 +283,10 @@ docker compose up --build
 
 ⚪ Notification-Service
 
-⚪ Gateway
+✅ Gateway
 
 ⚪ Frontend
 
 ---
 
-Bon développement à toute l'équipe 🚀
+Bon développement 
