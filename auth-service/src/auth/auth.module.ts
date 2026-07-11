@@ -1,16 +1,23 @@
 import { Module } from '@nestjs/common';
 import { JwtModule } from '@nestjs/jwt';
+import { PassportModule } from '@nestjs/passport';
+import { PassportStrategy } from '@nestjs/passport';
+import { ExtractJwt, Strategy } from 'passport-jwt';
+
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
-import { PassportModule, PassportStrategy } from '@nestjs/passport';
-import { ExtractJwt, Strategy } from 'passport-jwt';
+
+const jwtSecret = process.env.JWT_SECRET;
+if (!jwtSecret) {
+  throw new Error('JWT_SECRET environment variable is not defined');
+}
 
 class JwtStrategy extends PassportStrategy(Strategy) {
   constructor() {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
       ignoreExpiration: false,
-      secretOrKey: process.env.JWT_SECRET || 'mySuperSecretKey123',
+      secretOrKey: jwtSecret as string,
     });
   }
 
@@ -24,10 +31,10 @@ class JwtStrategy extends PassportStrategy(Strategy) {
     PassportModule,
 
     JwtModule.register({
-      secret: 'mySuperSecretKey123',
+      secret: jwtSecret,
       signOptions: {
-        expiresIn: '1d',
-      },
+         expiresIn: '1d' as any,
+},
     }),
   ],
 
