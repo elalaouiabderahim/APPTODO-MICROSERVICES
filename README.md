@@ -91,7 +91,7 @@ TodoFlow/
 
 ├── notification-service/
 
-├── gateway/
+├── api-gateway/
 
 ├── frontend/
 
