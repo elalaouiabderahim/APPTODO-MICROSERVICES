@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TodoFlow App</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f4f7fb; color: #1f2937; }
+    .container { max-width: 720px; margin: auto; padding: 2rem; background: white; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+    h1 { color: #0f172a; }
+    p { line-height: 1.6; }
+    .info { margin-top: 1.5rem; padding: 1rem; background: #eef2ff; border-left: 4px solid #4338ca; }
+    a { color: #4338ca; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>TodoFlow Microservices</h1>
+    <p>Application backend démarrée. Voici les services actifs :</p>
+    <ul>
+      <li>API Gateway: <strong>http://localhost:3000</strong></li>
+      <li>Auth Service: <strong>http://localhost:3001</strong></li>
+      <li>User Service: <strong>http://localhost:3002</strong></li>
+      <li>Todo Service: <strong>http://localhost:3003</strong></li>
+    </ul>
+    <div class="info">
+      <p>Accédez à <a href="http://localhost:3000">http://localhost:3000</a> pour voir cette page.</p>
+      <p>Les services utilisent PostgreSQL sur <strong>localhost:5432</strong>.</p>
+    </div>
+  </div>
+</body>
+</html>
