@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 TodoFlow - Collaborative TODO Platform (Microservices)
 
 ## 👥 Équipe
@@ -290,3 +291,6 @@ docker compose up --build
 ---
 
 Bon développement 
+=======
+# APPTODO-MICROSERVICES
+>>>>>>> 218c25de24c0508a25cb28c822de3fdbac306627
